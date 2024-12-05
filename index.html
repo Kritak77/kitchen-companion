@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Icons from Smashicons https://www.flaticon.com/packs/essential-set-2 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Companion</title>
+    <script src="main.js" defer></script>
+    <script src="fridge.js" defer></script>
+    <link href="style1.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+    <link href="style3.css" rel="stylesheet">
+    <link href="style4.css" rel="stylesheet">
+    <link href="recipe.css" rel="stylesheet">
+    <link href="fridge.css" rel="stylesheet">
+    <link href="option.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/clash-grotesk.css">
+
+</head>
+
+<body>
+    <div class="device">
+        <main>
+
+            <div id="Home" data-tab-content class="content-wrapper active">
+                <div class="content-banner">
+                    <div class="content-banner-button"></div>
+                    <div class="content-banner-header">
+                        <h1>Kitchen Kompanion</h1>
+                    </div>
+                    <div class="content-banner-extra"></div>
+                </div>
+
+                <div class="content-main">
+                    <div class="home-content">
+                        <div class="home-expiry">
+                            <h1>Expiring Soon:</h1>
+                            <div class="home-expiry-content">
+                                <div class="home-expiry-item-list">
+                                    
+                                </div>
+                                <div class="home-expiry-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-recipe">
+                            <h1>Today's Recipe:</h1>
+                            <div class="home-recipe-content">
+                                <ul class="home-recipe-list">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="home-grocery">
+                            <h1>Grocery List:</h1>
+                            <div class="home-grocery-content">
+                                <div class="home-grocery-item-list">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Fridge" data-tab-content class="content-wrapper" style="display: none;">
+
+                <!-- This Section is Banner -->
+                <div class="content-banner">
+                    <div class="content-banner-button">
+                        <div class="fridge-banner-button">
+                            <button class="backArrow">
+                                <span style='font-size:50px;'>&#8656;</span>
+                                <span style="font-size:20px">Back</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-banner-header">
+                        <div class="fridge-banner-header">
+                            <h1>Fridge</h1>
+                        </div>
+                    </div>
+                    <div class="content-banner-extra">
+                        <div class="extra-content">
+                            <div class="searchbar-container">
+                                <input type="text" name="text" class="search" id="frirdgeSearch"
+                                    placeholder="Type ingredient name" disabled>
+                                <button class="search__btn" id="fridgeSearchBtn" disabled style="pointer-events: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                                        <path
+                                            d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                                            fill="#efeff1"></path>
+                                    </svg>
+                                </button>
+                                <div class="search-x" id="fridgeSearchX">
+                                    X
+                                </div>
+                            </div>
+                            <div class="banner-filter">
+                                <input type="checkbox" id="filterCheckBox" disabled>
+                                <label for="filterCheckBox">
+                                    <div class="setting-btn">
+                                        <span class="bar bar1"></span>
+                                        <span class="bar bar2"></span>
+                                        <span class="bar bar1"></span>
+                                    </div>
+                                </label>
+                                <div id="fridgeFilterContent">
+                                    <h2>Filter</h2>
+                                    <form id="fridgeFilterForm">
+                                        <div class="fridge-filter-alphabet">
+                                            <h3>Sort By Alphabetical Order</h3>
+                                            <div>
+                                                <input type="radio" name="AO" id="fridgeAO1">
+                                                <label for="fridgeAO1">
+                                                    <div class="fridgeFilterCategory">
+                                                        <h3>A~Z</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="AO" id="fridgeAO2">
+                                                <label for="fridgeAO2">
+                                                    <div class="fridgeFilterCategory">
+                                                        <h3>Z~A</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="fridge-filter-exp">
+                                            <h3>Sort By Expiry</h3>
+                                            <div>
+                                                <input type="radio" name="AO" id="fridgeAO11">
+                                                <label for="fridgeAO11">
+                                                    <div class="fridgeFilterCategory">
+                                                        <h3>1~9</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="AO" id="fridgeAO22">
+                                                <label for="fridgeAO22">
+                                                    <div class="fridgeFilterCategory">
+                                                        <h3>9~1</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="fridge-filter-category">
+                                            <h3>Category</h3>
+                                            <div>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio1"
+                                                    value="Bakery"><label for="fridgeFilterRadio1">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Bakery</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio2"
+                                                    value="Beverages"><label for="fridgeFilterRadio2">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Beverages</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio3"
+                                                    value="Canned Food"><label for="fridgeFilterRadio3">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Canned Food</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio4"
+                                                    value="Cheese"><label for="fridgeFilterRadio4">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Cheese</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio5"
+                                                    value="Condiments"><label for="fridgeFilterRadio5">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Condiments</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio6"
+                                                    value="Dairy"><label for="fridgeFilterRadio6">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Dairy</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio7"
+                                                    value="Delicatessen"><label for="fridgeFilterRadio7">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Delicatessen</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio8"
+                                                    value="Fish"><label for="fridgeFilterRadio8">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Fish</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio9"
+                                                    value="Food Cupboard"><label for="fridgeFilterRadio9">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Food Cupboard</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio10"
+                                                    value="Frozen Food"><label for="fridgeFilterRadio10">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Frozen Food</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio11"
+                                                    value="Fruits"><label for="fridgeFilterRadio11">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Fruits</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio12"
+                                                    value="Meats"><label for="fridgeFilterRadio12">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Meats</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio13"
+                                                    value="Non-Food Item"><label for="fridgeFilterRadio13">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Non-Food Item</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio14"
+                                                    value="Sweets"><label for="fridgeFilterRadio14">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Sweets</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio15"
+                                                    value="Vegetables"><label for="fridgeFilterRadio15">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Vegetables</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="fridgeFilterRadio16"
+                                                    value="Not in Here"><label for="fridgeFilterRadio16">
+                                                    <div class="fridgeCategory3">
+                                                        <h3>Not in Here</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="fridgeFilterFormSubmit">
+                                            <button type="submit">Search</button>
+                                            <button type="reset">Clear</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="fridge-item-edit" style="display: none;">
+                                <button id="edit">
+                                    <svg height="1em" viewBox="0 0 512 512">
+                                        <path
+                                            d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- This Section is the content -->
+                <div class="content-main">
+                    <!-- Make sure you have a extra div to have your actual content. div above is just a wrapper -->
+                    <div class="fridge-content">
+                        <div class="fridge-content-area">
+
+                            <div class="content-list-starter">
+                                <div class="starter-img"></div>
+                                <div class="starter-content">
+                                    Get started by adding products to find recipes & manage your kitchen.
+                                </div>
+                                <button id="addButton2">ADD PRODUCT</button>
+                            </div>
+
+                            <div class="filter-area" style="visibility: hidden;">
+                                <div class="fridgeAddbutton">
+                                    <button id="fridgeAdd1">ADD</button>
+                                    <button id="fridgeRemove">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="fridge-list" style="display: none;">
+
+                                <!-- <div class="fridge-item">
+                                    <div class="fridge-item-image"></div>
+                                    <div class="fridge-item-name">
+                                        <h2>Chickentemaria Tenderdon Abiscus Foles</h2>
+                                    </div>
+                                    <div class="fridge-item-info">
+                                        <h3 class="fridge-item-exp">Exp:  &nbsp;<span>3</span> days</h3>
+                                        <br><h3 class="fridge-item-category">Category</h3>
+                                        <h3><span>(meat)</span></h3>
+                                    </div>
+                                    <div class="fridge-item-etc">
+                                        <h3>Quantity</h3>
+                                        <div class="fridge-item-q-wrapper">
+                                            <button class="fridge-item-q-up">&#129095;</button>
+                                            <div class="fridge-item-unit-wrapper">
+                                                <span class="fridge-item-q">15</span>
+                                                <span class="fridge-item-unit">(count)</span>
+                                            </div>
+                                            <button class="fridge-item-q-down">&#129093;</button>
+                                        </div>
+                                        <label for="cbx" class="cbx">
+                                            <div class="checkmark">
+                                            <input type="checkbox" id="cbx">
+                                            <div class="flip">
+                                              <div class="front"></div>
+                                                <div class="back">
+                                                  <svg viewBox="0 0 16 14" height="14" width="16">
+                                                    <path d="M2 8.5L6 12.5L14 1.5"></path>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fridge-add-screen" style="display: none;">
+                        <form id="fridgeAddForm">
+                            <label for="productName">
+                                <h2>Product Name</h2>
+                            </label>
+                            <input type="text" id="productName" name="name" required placeholder="Product Name">
+                            <br><br>
+                            <label for="fileInput">
+                                <h2>Choose/Upload Image(Currently Disabled)</h2>
+                                <img id="preview" src="./images/uploadImage.jpg" alt="Image Preview">
+                            </label>
+                            <h3>Please select the picture that best represents this product(if available) or else upload
+                                a new one from your phone(5mb)</h3>
+                            <br>
+                            <input type="file" accept="image/*" capture="camera" id="fileInput" disabled>
+                            <br><br>
+                            <input type="checkbox" id="fridgeCategoryCheckBox">
+                            <label for="fridgeCategoryCheckBox">
+                                <h2>Categories <span id="nspan"></span></h2>
+                            </label><br>
+                            <div class="fridgeCategoryItems">
+                                <input type="radio" name="radio" id="fridgeRadio1" value="Bakery"><label
+                                    for="fridgeRadio1">
+                                    <div class="fridgeCategory">
+                                        <h3>Bakery</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio2" value="Beverages"><label
+                                    for="fridgeRadio2">
+                                    <div class="fridgeCategory">
+                                        <h3>Beverages</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio3" value="Canned Food"><label
+                                    for="fridgeRadio3">
+                                    <div class="fridgeCategory">
+                                        <h3>Canned Food</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio4" value="Cheese"><label
+                                    for="fridgeRadio4">
+                                    <div class="fridgeCategory">
+                                        <h3>Cheese</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio5" value="Condiments"><label
+                                    for="fridgeRadio5">
+                                    <div class="fridgeCategory">
+                                        <h3>Condiments</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio6" value="Dairy"><label
+                                    for="fridgeRadio6">
+                                    <div class="fridgeCategory">
+                                        <h3>Dairy</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio7" value="Delicatessen"><label
+                                    for="fridgeRadio7">
+                                    <div class="fridgeCategory">
+                                        <h3>Delicatessen</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio8" value="Fish"><label
+                                    for="fridgeRadio8">
+                                    <div class="fridgeCategory">
+                                        <h3>Fish</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio9" value="Food Cupboard"><label
+                                    for="fridgeRadio9">
+                                    <div class="fridgeCategory">
+                                        <h3>Food Cupboard</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio10" value="Frozen Food"><label
+                                    for="fridgeRadio10">
+                                    <div class="fridgeCategory">
+                                        <h3>Frozen Food</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio11" value="Fruits"><label
+                                    for="fridgeRadio11">
+                                    <div class="fridgeCategory">
+                                        <h3>Fruits</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio12" value="Meats"><label
+                                    for="fridgeRadio12">
+                                    <div class="fridgeCategory">
+                                        <h3>Meats</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio13" value="Non-Food Item"><label
+                                    for="fridgeRadio13">
+                                    <div class="fridgeCategory">
+                                        <h3>Non-Food Item</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio14" value="Sweets"><label
+                                    for="fridgeRadio14">
+                                    <div class="fridgeCategory">
+                                        <h3>Sweets</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio15" value="Vegetables"><label
+                                    for="fridgeRadio15">
+                                    <div class="fridgeCategory">
+                                        <h3>Vegetables</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio16" value="Not in Here"><label
+                                    for="fridgeRadio16">
+                                    <div class="fridgeCategory">
+                                        <h3>Not in Here</h3>
+                                    </div>
+                                </label>
+                            </div>
+                            <br>
+                            <div class="quantity-wrapper">
+                                <div>
+                                    <label for="fridgeAddQuantity">
+                                        <h2>Net Weight/Count</h2>
+                                    </label>
+                                    <input type="number" id="fridgeAddQuantity" min="0" value="0">
+                                </div>
+                                <div>
+                                    <label for="qPerUnit">
+                                        <h2>Per/Unit</h2>
+                                    </label>
+                                    <input type="number" name="qPerUnit" id="qPerUnit" min="0" value="1">
+                                </div>
+                                <div>
+                                    <label for="fridgeAddUnit">
+                                        <h2>Unit</h2>
+                                    </label>
+                                    <select name="fridgeAddUnit" id="fridgeAddUnit">
+                                        <option value="mg">mg</option>
+                                        <option value="g" selected>g</option>
+                                        <option value="kg">kg</option>
+                                        <option value="lb">lb</option>
+                                        <option value="oz">oz</option>
+                                        <option value="count">count</option>
+                                        <option value="l">l</option>
+                                        <option value="ml">ml</option>
+                                        <option value="tbsps">tbsps</option>
+                                        <option value="cups">cups</option>
+                                        <option value="fl">oz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <label for="fridgeAddExp">
+                                <h2>Expiration Date</h2>
+                            </label>
+                            <input type="date" id="fridgeAddExp">
+                            <br><br>
+                            <button type="submit" id="fridgeItemFormSubmit">Create</button>
+                            <button type="reset" id="fridgeItemFormReset">Cancel</button>
+                            <div class="keyboard"></div>
+                        </form>
+                    </div>
+
+                    <div class="fridge-item-screen" style="display: none;">
+                        <form id="fridgeItemForm">
+                            <div class="fridge-item-starter">
+                                <div id="fridge-item-preview-wrapper">
+                                    <img id="fridge-item-preview" src="./images/noImg.webp" alt="Image Preview">
+                                </div>
+                                <div id="fridge-item-name-wrapper">
+                                    <div>
+                                        <label for="product-item-Name">
+                                            <h2>Product Name</h2>
+                                        </label>
+                                        <input type="text" id="product-Item-Name" name="name" required
+                                            placeholder="Product Name" disabled>
+
+                                    </div>
+                                    <div>
+                                        <label for="fridge-item-Exp">
+                                            <h2>Expiration Date</h2>
+                                        </label>
+                                        <input type="date" id="fridge-item-Exp" disabled>
+                                    </div>
+                                    <div>
+                                        <label for="fileInput">
+                                            <h2>Image</h2>
+                                            <h3>(Currently Disabled)</h3>
+                                            <input type="file" accept="image/*" capture="camera" id="fileInput"
+                                                disabled>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="checkbox" id="fridge-item-CategoryCheckBox">
+                            <label for="fridge-item-CategoryCheckBox">
+                                <h2>Categories <span id="nspan"></span></h2>
+                            </label><br>
+                            <div class="fridge-item-CategoryItems">
+                                <input type="radio" name="radio" id="fridgeRadio-1" value="Bakery"><label
+                                    for="fridgeRadio-1">
+                                    <div class="fridgeCategory2">
+                                        <h3>Bakery</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-2" value="Beverages"><label
+                                    for="fridgeRadio-2">
+                                    <div class="fridgeCategory2">
+                                        <h3>Beverages</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-3" value="Canned Food"><label
+                                    for="fridgeRadio-3">
+                                    <div class="fridgeCategory2">
+                                        <h3>Canned Food</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-4" value="Cheese"><label
+                                    for="fridgeRadio-4">
+                                    <div class="fridgeCategory2">
+                                        <h3>Cheese</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-5" value="Condiments"><label
+                                    for="fridgeRadio-5">
+                                    <div class="fridgeCategory2">
+                                        <h3>Condiments</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-6" value="Dairy"><label
+                                    for="fridgeRadio-6">
+                                    <div class="fridgeCategory2">
+                                        <h3>Dairy</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-7" value="Delicatessen"><label
+                                    for="fridgeRadio-7">
+                                    <div class="fridgeCategory2">
+                                        <h3>Delicatessen</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-8" value="Fish"><label
+                                    for="fridgeRadio-8">
+                                    <div class="fridgeCategory2">
+                                        <h3>Fish</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-9" value="Food Cupboard"><label
+                                    for="fridgeRadio-9">
+                                    <div class="fridgeCategory2">
+                                        <h3>Food Cupboard</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-10" value="Frozen Food"><label
+                                    for="fridgeRadio-10">
+                                    <div class="fridgeCategory2">
+                                        <h3>Frozen Food</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-11" value="Fruits"><label
+                                    for="fridgeRadio-11">
+                                    <div class="fridgeCategory2">
+                                        <h3>Fruits</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-12" value="Meats"><label
+                                    for="fridgeRadio-12">
+                                    <div class="fridgeCategory2">
+                                        <h3>Meats</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-13" value="Non-Food Item"><label
+                                    for="fridgeRadio-13">
+                                    <div class="fridgeCategory2">
+                                        <h3>Non-Food Item</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-14" value="Sweets"><label
+                                    for="fridgeRadio-14">
+                                    <div class="fridgeCategory2">
+                                        <h3>Sweets</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-15" value="Vegetables"><label
+                                    for="fridgeRadio-15">
+                                    <div class="fridgeCategory2">
+                                        <h3>Vegetables</h3>
+                                    </div>
+                                </label>
+                                <input type="radio" name="radio" id="fridgeRadio-16" value="Not in Here"><label
+                                    for="fridgeRadio-16">
+                                    <div class="fridgeCategory2">
+                                        <h3>Not in Here</h3>
+                                    </div>
+                                </label>
+                            </div>
+                            <br>
+                            <div class="quantity-wrapper">
+                                <div>
+                                    <label for="fridge-item-Quantity">
+                                        <h2>Net Weight/Count</h2>
+                                    </label>
+                                    <input type="number" id="fridge-item-Quantity" min="0" value="0" disabled>
+                                </div>
+                                <div>
+                                    <label for="fridge-item-qPerUnit">
+                                        <h2>Per/Unit</h2>
+                                    </label>
+                                    <input type="number" name="qPerUnit" id="fridge-item-qPerUnit" min="0" value="1"
+                                        disabled>
+                                </div>
+                                <div>
+                                    <label for="fridgeAddUnit">
+                                        <h2>Unit</h2>
+                                    </label>
+                                    <select name="fridgeAddUnit" id="fridge-item-Unit" disabled>
+                                        <option value="mg">mg</option>
+                                        <option value="g" selected>g</option>
+                                        <option value="kg">kg</option>
+                                        <option value="lb">lb</option>
+                                        <option value="oz">oz</option>
+                                        <option value="count">count</option>
+                                        <option value="l">l</option>
+                                        <option value="ml">ml</option>
+                                        <option value="tbsps">tbsps</option>
+                                        <option value="cups">cups</option>
+                                        <option value="fl">oz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="fridge-item-recipeList-wrapper">
+                                <input type="checkbox" id="fridge-item-RecipeCheckBox">
+                                <label for="fridge-item-RecipeCheckBox">
+                                    <h2>Recipes <span id="nspan"></span></h2>
+                                </label>
+                                <div class="fridge-item-RecipeItems">
+                                    
+                                </div>
+                            </div>
+                            <br><br>
+                            <button type="submit" id="fridge-item-Update">Update</button>
+                            <div class="keyboard"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Recipes" data-tab-content class="content" style="display: none;">
+                <div class="user-bar">
+                    <div class="content-banner-button"></div>
+                    <div class="content-banner-header">
+                        <ul class="users">
+                            <li id="user1">
+                                <img src="icons/user.png" />
+                                <h3>Me</h3>
+                            </li>
+                            <li id="user2">
+                                <img src="icons/users.png" />
+                                <h3>Family</h3>
+                            </li>
+                            <li onclick="addUser()">
+                                <img src="icons/add.png" />
+                                <h3>New</h3>
+                            </li>
+                        </ul>
+                        
+                        <div class="user-content">
+                            
+                        </div>
+                    </div>
+                    <div class="content-banner-extra">
+                        <div class="extra-recipe-content">
+                            <div class="recipe-filter">
+                                <input type="checkbox" id="recipeFilterCheckBox">
+                                <label for="recipeFilterCheckBox">
+                                    <div class="setting-btn">
+                                        <span class="bar bar1"></span>
+                                        <span class="bar bar2"></span>
+                                        <span class="bar bar1"></span>
+                                    </div>
+                                </label>
+                                <div id="recipeFilterContent">
+                                    <h2>Filter</h2>
+                                    <form id="recipeFilterForm">
+                                        <div class="recipe-filter-alphabet">
+                                            <h3>Sort By Alphabetical Order</h3>
+                                            <div>
+                                                <input type="radio" name="AO" id="recipeAO1">
+                                                <label for="recipeAO1">
+                                                    <div class="recipeFilterCategory">
+                                                        <h3>A~Z</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="AO" id="recipeAO2">
+                                                <label for="recipeAO2">
+                                                    <div class="recipeFilterCategory">
+                                                        <h3>Z~A</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="recipe-filter-category">
+                                            <h3>Category</h3>
+                                            <div>
+                                                <input type="radio" name="radio" id="recipeFilterRadio1"
+                                                    value="Vegetarian"><label for="recipeFilterRadio1">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Vegetarian</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio2"
+                                                    value="Vegan"><label for="recipeFilterRadio2">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Vegan</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio3"
+                                                    value="Halal"><label for="recipeFilterRadio3">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Halal</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio4"
+                                                    value="Kosher"><label for="recipeFilterRadio4">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Kosher</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio5"
+                                                    value="Gluten-Free"><label for="recipeFilterRadio5">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Gluten-Free</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio6"
+                                                    value="Lactose-Free"><label for="recipeFilterRadio6">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Lactose-Free</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio7"
+                                                    value="Peanut-Free"><label for="recipeFilterRadio7">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Peanut-Free</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio8"
+                                                    value="Pescatarian"><label for="recipeFilterRadio8">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Pescatarian</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio9"
+                                                    value="Heart Healthy"><label for="recipeFilterRadio9">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Heart Healthy</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio10"
+                                                    value="Low-Soduim"><label for="recipeFilterRadio10">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Low-Soduim</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio11"
+                                                    value="Paleo"><label for="recipeFilterRadio11">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Paleo</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio12"
+                                                    value="Wheat-Free"><label for="recipeFilterRadio12">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Wheat-Free</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio13"
+                                                    value="Cholesterol-Friendly"><label for="recipeFilterRadio13">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Cholesterol-Friendly</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio14"
+                                                    value="Egg-Free"><label for="recipeFilterRadio14">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Egg-Free</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio15"
+                                                    value="Tree Nut-Free"><label for="recipeFilterRadio15">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Tree Nut-Free</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="recipeFilterRadio16"
+                                                    value="Shellfish-Free"><label for="recipeFilterRadio16">
+                                                    <div class="recipeCategory3">
+                                                        <h3>Shellfish-Free</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+        
+                                        <div class="recipeFilterFormSubmit">
+                                            <button type="button" id="recipeFilterSubmit">Search</button>
+                                            <button name="button" type="reset" id="recipeFilterReset">Clear</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="recipecontent">
+                    <ul class="recipeboxes" id="recipeList">
+                        <li onclick="goToAddRecipe()">
+                            <img src="icons/add.png" />
+                            <h3>New</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="AddRecipe" data-tab-content class="content" style="display: none;">
+                <div class="content-banner">
+                    <div class="content-banner-button" style="visibility: inherit;" onclick="displayRecipeList()">
+                        <div class="recipe-banner-button">
+                            <button class="backArrow">
+                                <span style='font-size:50px;'>&#8656;</span>
+                                <span style="font-size:20px">Back</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-banner-header">
+                        <div class="recipe-banner-header">
+                            <h1>Add Recipe</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <div class="recipe-add-screen">
+                        <form id="recipeAddForm">
+                            <label for="fileInput">
+                            <h2>Choose/Upload Image(Currently Disabled)</h2>
+                            <img id="preview" src="icons/compose.png" alt="Image Preview">
+                            </label>
+                            
+                            <h3>Please select the picture that best represents this product(if available) or else upload a new one from your phone(5mb)</h3>
+                            <br>
+                            <input type="file" accept="image/*" capture="camera" id="fileInput" disabled>
+                            <br><br>
+                            <label for="recipeName"><h2>Recipe Name</h2></label>
+                            <input type="text" id="recipeName" name="name" required placeholder="Recipe Name">
+                            <br><br>
+
+                            <br><br>
+                            <input type="checkbox" id="recipeCategoryCheckBox">
+                            <label for="recipeCategoryCheckBox">
+                                <h2>Categories <span id="nspan"></span></h2>
+                            </label><br>
+                            <div class="recipeCategoryItems">
+                                <input type="checkbox" name="checkbox" id="recipecheckbox1" value="Vegetarian"><label for="recipecheckbox1"><div class="recipeCategory"><h3>Vegetarian</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox2" value="Vegan"><label for="recipecheckbox2"><div class="recipeCategory"><h3>Vegan</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox3" value="Halal"><label for="recipecheckbox3"><div class="recipeCategory"><h3>Halal</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox4" value="Kosher"><label for="recipecheckbox4"><div class="recipeCategory"><h3>Kosher</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox5" value="Gluten-Free"><label for="recipecheckbox5"><div class="recipeCategory"><h3>Gluten-Free</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox6" value="Lactose-Free"><label for="recipecheckbox6"><div class="recipeCategory"><h3>Lactose-Free</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox7" value="Peanut-Free"><label for="recipecheckbox7"><div class="recipeCategory"><h3>Peanut-Free</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox8" value="Pescatarian"><label for="recipecheckbox8"><div class="recipeCategory"><h3>Pescatarian</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox9" value="Heart Healthy"><label for="recipecheckbox9"><div class="recipeCategory"><h3>Heart Healthy</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox10" value="Low-Sodium"><label for="recipecheckbox10"><div class="recipeCategory"><h3>Low-Sodium</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox11" value="Paleo"><label for="recipecheckbox11"><div class="recipeCategory"><h3>Paleo</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox13" value="Cholesterol-Friendly"><label for="recipecheckbox13"><div class="recipeCategory"><h3>Cholesterol-Friendly</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox15" value="Tree Nut-Free"><label for="recipecheckbox15"><div class="recipeCategory"><h3>Tree Nut-Free</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox16" value="Shellfish-Free"><label for="recipecheckbox16"><div class="recipeCategory"><h3>Shellfish-Free</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox17" value="Egg-Free"><label for="recipecheckbox17"><div class="recipeCategory"><h3>Egg-Free</h3></div></label>
+                                <input type="checkbox" name="checkbox" id="recipecheckbox18" value="Wheat-Free"><label for="recipecheckbox18"><div class="recipeCategory"><h3>Wheat-Free</h3></div></label>
+                            </div>
+                            <br>
+                            <div class="list-wrapper">
+                                <label><h2>Ingredients</h2></label>
+                                <ul class="recipe-ingredients-entry">
+                                    <li>
+                                        <div>
+                                            <input type="text" name="text" id="recipeIngredient">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button type="button" id="recipeAddIngredientBox" onclick="addRecipeEntryBox()">Add ingredient</button>
+                            </div>
+                            <br>
+                            <label><h2>Instructions</h2></label>
+                            <textarea type="text" id="recipeInstructions"></textarea>
+                                
+                            <button type="button" id="recipeFormSubmit" onclick="createRecipe()">Create</button>
+                            <button type="button" id="recipeFormReset" onclick="displayRecipeList()">Cancel</button>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="RecipeInfo" data-tab-content class="content" style="display: none;">
+                <div class="content-banner">
+                    <div class="content-banner-button" style="visibility: inherit;" onclick="displayRecipeList()">
+                        <div class="recipe-banner-button">
+                            <button class="backArrow">
+                                <span style='font-size:50px;'>&#8656;</span>
+                                <span style="font-size:20px">Back</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-banner-header">
+                        <div class="recipe-banner-header">
+                            <h1>Recipes</h1>
+                        </div>
+                    </div>
+                    <div class="content-banner-extra">
+                        <div class="recipeBannerButtons">
+                            <button id="recipeEdit">Edit</button>
+                            <button id="recipeDelete">Delete</button>
+                            <button id="recipeBatch">Use Ingredients</button>
+                            <button id="recipeToGrocery">Add to List</button>
+                            <div class="recipeBannerConsume-content">
+                                <form id="recipeConsumeForm">
+                                    <h2>Ingredients Found</h2>
+                                    <h3>Enter how much you consumed</h3>
+                                    <div class="recipeConsumeFound">
+                                        
+                                    </div>
+                                    <div id="recipeConsumeFormButtons">
+                                        <button type="submit" id="recipeUse">Use</button>
+                                        <button type="reset" id="recipeCancel">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-main">
+                    <h1 class="recipeHeader" id="infoRecipeName"></h1>
+                    <img src="icons/compose.png" class="infoImg" \>
+                    <h2>Ingredients</h2>
+                    <ul class="recipeIngredients" id="infoRecipeIngredients"></ul>
+                    <h2>instructions</h2>
+                    <h3 class="recipeInstructions" id="infoRecipeInstructions"></h3>
+                    <h2>Categories</h2>
+                    <h3 class="recipeCategories" id="infoRecipeCategories"></h3>
+                    <br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+            <div id="Groceries" data-tab-content class="content" style="display: none;">
+                <!-- Grocery List Banner -->
+                <div class="content-banner">
+                    <div class="content-banner-button">
+                        <div class="grocery-banner-button">
+                            <button class="backArrow" id="back" onclick="backToGrocery()">
+                                <span style='font-size:50px;'>&#8656;</span>
+                                <span style="font-size:20px">Back</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content-banner-header">
+                        <div class="grocery-banner-header">
+                            <h1>Grocery List</h1>
+                        </div>
+                    </div>
+                    <div class="content-banner-extra">
+                        <div class="extra-content" id="extra">
+                            <div class="searchbar-container">
+                                <input type="text" id="productSearch" placeholder="Type grocery name"
+                                    oninput="searchProduct()">
+                                <button class="search__btn" id="search_2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                                        <path
+                                            d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                                            fill="#efeff1"></path>
+                                    </svg>
+                                </button>
+                                <div class="search-x" id="search-x">X</div>
+                            </div>
+                            <div class="grocery-filter" style="display: block;">
+                                <input type="checkbox" id="groceryfilterCheckBox">
+                                <label for="groceryfilterCheckBox">
+                                    <div class="setting-btn">
+                                        <span class="bar bar1"></span>
+                                        <span class="bar bar2"></span>
+                                        <span class="bar bar1"></span>
+                                    </div>
+                                </label>
+                                <div id="groceryFilterContent">
+                                    <h2>Filter</h2>
+                                    <form id="groceryFilterForm">
+                                        <div class="grocery-filter-alphabet">
+                                            <h3>Sort By Alphabetical Order</h3>
+                                            <div>
+                                                <input type="radio" name="AO" id="groceryAO1">
+                                                <label for="groceryAO1">
+                                                    <div class="groceryFilterCategory">
+                                                        <h3>A~Z</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="AO" id="groceryAO2">
+                                                <label for="groceryAO2">
+                                                    <div class="groceryFilterCategory">
+                                                        <h3>Z~A</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="grocery-filter-category">
+                                            <h3>Category</h3>
+                                            <div>
+                                                <input type="radio" name="radio" id="groceryFilterRadio1"
+                                                    value="Bakery"><label for="groceryFilterRadio1">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Bakery</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio2"
+                                                    value="Beverages"><label for="groceryFilterRadio2">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Beverages</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio3"
+                                                    value="Canned Food"><label for="groceryFilterRadio3">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Canned Food</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio4"
+                                                    value="Cheese"><label for="groceryFilterRadio4">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Cheese</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio5"
+                                                    value="Condiments"><label for="groceryFilterRadio5">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Condiments</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio6"
+                                                    value="Dairy"><label for="groceryFilterRadio6">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Dairy</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio7"
+                                                    value="Delicatessen"><label for="groceryFilterRadio7">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Delicatessen</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio8"
+                                                    value="Fish"><label for="groceryFilterRadio8">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Fish</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio9"
+                                                    value="Food Cupboard"><label for="groceryFilterRadio9">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Food Cupboard</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio10"
+                                                    value="Frozen Food"><label for="groceryFilterRadio10">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Frozen Food</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio11"
+                                                    value="Fruits"><label for="groceryFilterRadio11">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Fruits</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio12"
+                                                    value="Meats"><label for="groceryFilterRadio12">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Meats</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio13"
+                                                    value="Non-Food Item"><label for="groceryFilterRadio13">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Non-Food Item</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio14"
+                                                    value="Sweets"><label for="groceryFilterRadio14">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Sweets</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio15"
+                                                    value="Vegetables"><label for="groceryFilterRadio15">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Vegetables</h3>
+                                                    </div>
+                                                </label>
+                                                <input type="radio" name="radio" id="groceryFilterRadio16"
+                                                    value="Not in Here"><label for="groceryFilterRadio16">
+                                                    <div class="groceryCategory3">
+                                                        <h3>Not in Here</h3>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="groceryFilterFormSubmit">
+                                            <button type="submit">Search</button>
+                                            <button type="reset">Clear</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Grocery List Content -->
+                <div class="grocery-content-first">
+                    <div class="grocery-buttons" style="display: none;">
+                        <button onclick="goToAddGrocery()" class="add-product-btn">ADD</button>
+                        <button onclick="removeSelectedProducts()">Remove</button>
+                        <button onclick="groceryToFridge()">Add To Fridge</button>
+                    </div>
+                    <div class="grocery-content">
+                    <ul class="grocerylist" id="groceryList"></ul>
+                    </div>
+                </div>
+                <!-- Add Product Form Modal -->
+                <div id="AddGrocery" class="tab-content add-grocery-screen" style="display: none;">
+                    <h2>Add Product</h2>
+                    <input type="text" id="productsName" placeholder="Product Name" />
+                    <!-- Categories Section -->
+                    <input type="checkbox" id="groceryCategoryCheckBox">
+                    <label for="groceryCategoryCheckBox">
+                        <h2>Categories <span id="nspans"></span></h2>
+                    </label><br>
+                    <div class="groceryCategoryItems">
+                        <input type="radio" name="radio" id="groceryRadio1" value="Bakery"><label for="groceryRadio1">
+                            <div class="groceryCategory">
+                                <h3>Bakery</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio2" value="Beverages"><label
+                            for="groceryRadio2">
+                            <div class="groceryCategory">
+                                <h3>Beverages</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio3" value="Canned Food"><label
+                            for="groceryRadio3">
+                            <div class="groceryCategory">
+                                <h3>Canned Food</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio4" value="Cheese"><label for="groceryRadio4">
+                            <div class="groceryCategory">
+                                <h3>Cheese</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio5" value="Condiments"><label
+                            for="groceryRadio5">
+                            <div class="groceryCategory">
+                                <h3>Condiments</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio6" value="Dairy"><label for="groceryRadio6">
+                            <div class="groceryCategory">
+                                <h3>Dairy</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio7" value="Delicatessen"><label
+                            for="groceryRadio7">
+                            <div class="groceryCategory">
+                                <h3>Delicatessen</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio8" value="Fish"><label for="groceryRadio8">
+                            <div class="groceryCategory">
+                                <h3>Fish</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio9" value="Food Cupboard"><label
+                            for="groceryRadio9">
+                            <div class="groceryCategory">
+                                <h3>Food Cupboard</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio10" value="Frozen Food"><label
+                            for="groceryRadio10">
+                            <div class="groceryCategory">
+                                <h3>Frozen Food</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio11" value="Fruits"><label for="groceryRadio11">
+                            <div class="groceryCategory">
+                                <h3>Fruits</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio12" value="Meats"><label for="groceryRadio12">
+                            <div class="groceryCategory">
+                                <h3>Meats</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio13" value="Non-Food Item"><label
+                            for="groceryRadio13">
+                            <div class="groceryCategory">
+                                <h3>Non-Food Item</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio14" value="Sweets"><label for="groceryRadio14">
+                            <div class="groceryCategory">
+                                <h3>Sweets</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio15" value="Vegetables"><label
+                            for="groceryRadio15">
+                            <div class="groceryCategory">
+                                <h3>Vegetables</h3>
+                            </div>
+                        </label>
+                        <input type="radio" name="radio" id="groceryRadio16" value="Not in Here"><label
+                            for="groceryRadio16">
+                            <div class="groceryCategory">
+                                <h3>Not in Here</h3>
+                            </div>
+                        </label>
+                    </div>
+                    <br>
+                    <div class="quantity-wrapper">
+                        <div>
+                            <label for="groceryAddQuantity">
+                                <h2>Net Weight/Count</h2>
+                            </label>
+                            <input type="number" id="groceryAddQuantity" min="0" value="0">
+                        </div>
+                        <div>
+                            <label for="groceryqPerUnit">
+                                <h2>Per/Unit</h2>
+                            </label>
+                            <input type="number" name="groceryqPerUnit" id="groceryqPerUnit" min="0" value="1">
+                        </div>
+                        <div>
+                            <label for="groceryAddUnit">
+                                <h2>Unit</h2>
+                            </label>
+                            <select name="groceryAddUnit" id="groceryAddUnit">
+                                <option value="mg">mg</option>
+                                <option value="g" selected>g</option>
+                                <option value="kg">kg</option>
+                                <option value="lb">lb</option>
+                                <option value="oz">oz</option>
+                                <option value="count">count</option>
+                                <option value="l">l</option>
+                                <option value="ml">ml</option>
+                                <option value="tbsps">tbsps</option>
+                                <option value="cups">cups</option>
+                                <option value="fl">oz</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button onclick="createProduct()">Add to Grocery List</button>
+                    <button onclick="backToGrocery()">Cancel</button>
+                </div>
+            </div>
+            <div id="Options" data-tab-content class="content-wrapper">
+                <div class="content-banner">
+                    <div class="content-banner-button"></div>
+                    <div class="content-banner-header">
+                        <h1>Options</h1>
+                    </div>
+                    <div class="content-banner-extra"></div>
+                </div>
+            
+                <div class="content-main">
+                    <div class="options-content">
+                        <div class="options-section">
+                            <h2>Inventory Options</h2>
+                            <div class="option-notification">
+                                <label id="grocery-auto-update" for="inventory-notifications"><h3>Enable Notifications</h3></label>
+                                <input type="checkbox" id="inventory-notifications" name="inventory-notifications">
+                            </div>
+                            <br>
+                            <div class="option-temp">
+                                <label id="grocery-auto-update" for="inventory-temp"><h3>Temperature Setting</h3></label>
+                                <input type="number" id="inventory-temp" name="inventory-temp" min="-30" max="10" step="1"> °C
+                            </div>
+                        </div>
+                        <div class="options-section">
+                            <h2>Recipe Options</h2>
+                            <label id="grocery-auto-update" for="recipe-portion-size"><h3>Default Portion Size</h3></label>
+                            <input type="number" id="recipe-portion-size" name="recipe-portion-size" min="1" step="1">
+                            <br>
+                            <label id="grocery-auto-update" for="recipe-preferences"><h3>Dietary Preferences</h3></label>
+                            <select id="recipe-preferences" name="recipe-preferences">
+                                <option value="none">None</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="gluten-free">Gluten-Free</option>
+                            </select>
+                        </div>
+                        <div class="options-section">
+                            <h2>Grocery List Options</h2>
+                            <br>
+                            <div class="option-grocery">
+                                <label for="grocery-sort"><h3>Enable Sort for Grocery List</h3></label>
+                                <input type="checkbox" id="grocery-sort" name="grocery-sort" checked>
+                            </div>
+                        </div>
+                        <div class="options-section">
+                            <h3>Choose Theme</h3>
+                            <button id="defaultTheme">Default</button>
+                            <button id="redTheme">Red</button>
+                            <button id="blueTheme">Blue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+        </main>
+        <ul class="navbar">
+            <li onclick="showTab('Home')" data-tab-target="#Home" class="active"><img src="icons/home.png" />
+                <h3>Home</h3>
+            </li>
+            <li onclick="showTab('Fridge')" data-tab-target="#Fridge"><img src="icons/archive.png" />
+                <h3>Fridge</h3>
+            </li>
+            <li onclick="displayRecipeList()" data-tab-target="#Recipes"><img src="icons/notebook.png" />
+                <h3>Recipes</h3>
+            </li>
+            <li onclick="showTab('Groceries')" data-tab-target="#Groceries"><img src="icons/list.png" />
+                <h3>Grocery List</h3>
+            </li>
+            <li onclick="showTab('Options')" data-tab-target="#Options"><img src="icons/settings.png" />
+                <h3>Options</h3>
+            </li>
+
+        </ul>
+        <div class="keyboard" id="keyboard"> 
+
+        </div>
+
+        <div class="keyboard-numeric" id="keyboard-numeric"> 
+
+        </div>
+    </div>
+</body>
+
+</html>

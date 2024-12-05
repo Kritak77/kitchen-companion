@@ -1,0 +1,24 @@
+/* Options Content */
+.options-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between sections */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+/* Options Section */
+.options-section {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 10px; /* Increased padding for a more spacious feel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+}
+
+/* Label Styles */
+#grocery-auto-update {
+    font-size: 1.1rem; /* Increased size for better readability */
+    color: var(--text-color);
+    display: block; /* Make labels block elements */
+    margin-bottom: 8px; /* Increased margin for spacing */
+}
+

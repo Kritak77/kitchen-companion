@@ -1,0 +1,78 @@
+.profile-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#warningIMG {
+    cursor: pointer;
+
+}
+
+.warning {
+    width: 100%;
+    height: 50px;
+    list-style: none;
+    background-color: red;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.warning.active {
+    display: flex;
+}
+
+.warning span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+#Colors div {
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Colors div .first {
+    width: 100%;
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#Colors div .second {
+    width: 100%;
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#LR div {
+    display: flex;
+    width: 100%;
+    height: calc(960px - 133px);
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#LR div span {
+    margin-bottom: 10px;
+}

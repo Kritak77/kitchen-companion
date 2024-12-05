@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: beige;
+
+}
+
+.overlay {
+    z-index: 99;
+    margin: 0;
+    width: 640px;
+    height: 960px;
+    padding: 0;
+    transform: translate(0px, -380px);
+}
+
+#keyboard {
+    z-index: 999;
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#keyboard img{
+    width: 640px;
+}
+
+
+fieldset {
+    width: 500px;
+    height: 250px;
+}
+
+fieldset legend {
+    font-size: 32px;
+}
+
+.display {
+    width: 500px;
+    height: 400px;
+    background-color: var(--primary-color2);
+}

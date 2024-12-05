@@ -1,0 +1,1077 @@
+.extra-content {
+    display: flex;
+    width: 352px;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fridge-content {
+    position: relative;
+    height: 800px;
+    width: 640px;
+    overflow: hidden;
+}
+
+.fridge-content-area {
+    position: relative;
+    width: 640px;
+    height: 800px;
+    background-color: var(--secondary-color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+
+.filter-area {
+    grid-area: filter-area;
+    height: 50px;
+    width: 640px;
+    z-index: 10;
+    position: sticky; 
+    top: 0;
+    background-color: var(--secondary-color1);
+    overflow: hidden;
+}
+
+.fridgeAddbutton {
+    
+}
+
+#fridgeAddUnit {
+    width: 100px;
+}
+
+
+.fridge-list {
+    grid-area: fridge-list;
+    width: 640px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+}
+
+
+
+
+
+/* Search Text */
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 234px;
+    position: relative;
+}
+
+.search {
+    max-width: 190px;
+    height: 39px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--primary-color1);
+    caret-color: #f7f7f8;
+    color: var(--secondary-color1);
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+.search:focus {
+    border: 2px solid var(--secondary-color1);
+    background-color: #0e0e10;
+}
+
+.search__btn {
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color1);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    height: 39px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1px;
+}
+
+.searchbar-container .search-x {
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    font-weight: 800;
+    color: var(--primary-color2);
+    cursor: pointer;
+}
+
+
+.searchbar-container>button {
+    border-radius: 5px;
+    color: var(--secondary-color1);
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* Starter */
+.content-list-starter {
+    height: 400px;
+    width: 70%;
+    background-color: var(--secondary-color1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: 'ClashGrotesk-Regular';
+    font-size: 24px;
+}
+
+.starter-img {
+    height: 200px;
+    width: calc(100% - 50%);
+    background-image: url(./images/fridgeOpeningImg.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.starter-content {
+    text-align: center;
+    width: 60%;
+}
+
+#addButton2 {
+    border-radius: 5px;
+    background: var(--linear-grad);
+    color: var(--secondary-color1);
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    font-family: 'ClashGrotesk-Regular';
+
+}
+
+
+/* Adding Item Form */
+.fridge-add-screen {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.fridge-add-screen #preview {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.fridge-add-screen input {
+    width: 485px;
+    height: 40px;
+    background-color: var(--primary-color1);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--secondary-color1);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    caret-color: #f7f7f8;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+.fridge-add-screen #fridgeAddQuantity {
+    width: 250px;
+}
+
+.fridge-add-screen #qPerUnit {
+    width: 100px;
+}
+
+.fridge-add-screen select {
+    width: 80px;
+    height: 40px;
+    background-color: var(--primary-color1);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--secondary-color1);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    caret-color: #f7f7f8;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+.fridge-add-screen .quantity-wrapper {
+    display: flex;
+}
+
+.fridge-add-screen #fridgeAddExp {
+    width: 250px;
+    color-scheme: dark;
+}
+
+.fridge-add-screen input[type="radio"] {
+    display: none;
+}
+
+.fridge-add-screen #fridgeCategoryCheckBox {
+    display: none;
+}
+
+#fridgeCategoryCheckBox:checked~.fridgeCategoryItems {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#nspan::before {
+    content: '\25B6';
+    width: fit-content;
+    height: 10px;
+    color: var(--primary-color1);
+}
+
+#fridgeCategoryCheckBox:checked+label #nspan::before {
+    content: '\25BC';
+}
+
+#fridgeCategoryCheckBox:checked~#nspan {
+    content: '&darr';
+}
+
+
+.fridge-add-screen .fridgeCategoryItems {
+    display: none;
+}
+
+.fridge-add-screen .fridgeCategory {
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid var(--primary-color2);
+    width: max-content;
+    height: fit-content;
+    background-color: var(--primary-color2);
+    color: var(--secondary-color1);
+}
+
+.fridge-add-screen input[type="radio"]:checked+label .fridgeCategory {
+    background-color: var(--secondary-color1);
+    border: 1px solid var(--primary-color1);
+    color: var(--primary-color1);
+}
+
+
+
+
+/* Filter Icon */
+.banner-filter {
+    position: relative;
+}
+
+.setting-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: var(--primary-color1);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 2px;
+}
+
+.bar::before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    background-color: rgb(126, 117, 255);
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 5px white;
+}
+
+.bar1::before {
+    transform: translateX(-10px);
+}
+
+.bar2::before {
+    transform: translateX(10px);
+}
+
+/* Filter */
+#filterCheckBox {
+    display: none;
+}
+
+#fridgeFilterContent {
+    display: none;
+}
+
+#filterCheckBox:checked~#fridgeFilterContent {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    /* use fit content if stuff is long */
+    left: -230px;
+    top: 55px;
+    z-index: 1000;
+    background-color: var(--primary-color1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--secondary-color1);
+    color: var(--secondary-color1);
+}
+
+#filterCheckBox:checked+label .setting-btn .bar1::before {
+    transform: translateX(10px);
+}
+
+#filterCheckBox:checked+label .setting-btn .bar2::before {
+    transform: translateX(-10px);
+}
+
+/* Fridge item style */
+.fridge-item {
+    width: 620px;
+    height: 102px;
+    border: black solid 1px;
+    display: grid;
+    grid-template-columns: 120px 180px 155px 165px;
+    grid-template-rows: 100px;
+    grid-template-areas:
+        "fridge-item-image" "fridge-item-name" "fridge-item-info" "fridge-item-etc";
+    border-radius: 5px;
+    background-color: var(--primary-color2);
+    cursor: pointer;
+}
+
+.fridge-item-image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 0 0 5px;
+    background-image: url(./images/noImg.webp);
+}
+
+.fridge-item-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color1);
+    margin-left: 10px;
+    overflow: auto;
+}
+
+.fridge-item-name h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.fridge-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color1);
+}
+
+.fridge-item-exp span {
+    color: red;
+}
+
+.fridge-item-etc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color1);
+    position: relative;
+
+}
+
+.fridge-item-etc span {
+    font-family: 'ClashGrotesk-Regular';
+    font-size: 1.2rem;
+}
+
+.fridge-item-etc button {
+    width: 40px;
+    text-align: center;
+    padding: 8px;
+}
+
+.fridge-item-etc .fridge-item-q-wrapper {
+    display: inline-flex;
+    width: 160px;
+}
+
+.fridge-item-unit-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+}
+
+
+.cbx {
+    -webkit-perspective: 20;
+    perspective: 20;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    margin: -12px;
+    border: 2px solid #e8e8eb;
+    background: #e8e8eb;
+    border-radius: 4px;
+    transform: translate3d(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flip {
+    display: block;
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+#cbx {
+    display: none;
+}
+
+#cbx:checked+.cbx {
+    border-color: #0b76ef;
+}
+
+#cbx:checked+.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.front {
+    background: #fff;
+    z-index: 1;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background: var(--secondary-color1);
+    text-align: center;
+    color: var(--secondary-color1);
+    line-height: 20px;
+}
+
+.back svg {
+    margin-top: 3px;
+    fill: none;
+}
+
+.back svg path {
+    stroke: var(--primary-color1);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Fridge Item Info Screen */
+
+
+.fridge-item-screen {
+    width: 640px;
+    height: 800px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#fridgeItemForm {
+    width: 100%;
+    height: 100%;
+}
+#fridge-item-preview {
+    width: 320px;
+    height: 320px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.fridge-item-screen .fridge-item-starter {
+    display: flex;
+    border-bottom: 1px solid var(--primary-color2);
+    width: 640px;
+    height: 325px;
+}
+
+#fridge-item-name-wrapper {
+    padding-left: 5px;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fridge-item-screen input {
+    width: 300px;
+    height: 40px;
+    background-color: var(--primary-color1);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--secondary-color1);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    caret-color: #f7f7f8;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+.fridge-item-screen input[type="radio"] {
+    display: none;
+}
+
+.fridge-item-screen #fridge-item-CategoryCheckBox {
+    display: none;
+}
+
+.fridge-item-screen .fridge-item-CategoryItems {
+    display: none;
+}
+
+#fridge-item-CategoryCheckBox:checked~.fridge-item-CategoryItems {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: 1px solid var(--primary-color2);
+    padding-bottom: 10px;
+}
+
+#nspan::before {
+    content: '\25B6';
+    width: fit-content;
+    height: 10px;
+    color: var(--primary-color1);
+}
+
+#fridge-item-CategoryCheckBox:checked+label #nspan::before {
+    content: '\25BC';
+}
+
+#fridge-item-CategoryCheckBox:checked~#nspan {
+    content: '&darr';
+}
+
+
+.fridge-item-screen .fridgeCategory2 {
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid var(--primary-color2);
+    width: max-content;
+    height: fit-content;
+    background-color: var(--primary-color2);
+    color: var(--secondary-color1);
+}
+
+.fridge-item-screen input[type="radio"]:checked + label .fridgeCategory2 {
+    background-color: var(--secondary-color1);
+    border: 1px solid var(--primary-color1);
+    color: var(--primary-color1);
+}
+
+.fridge-item-screen #fridge-item-Exp {
+    width: 250px;
+    color-scheme: dark;
+}
+
+.fridge-item-screen .quantity-wrapper {
+    display: flex;
+    border-bottom: 1px solid var(--primary-color2);
+    padding-bottom: 5px;
+}
+
+.fridge-item-screen #fridge-item-Quantity {
+    width: 250px;
+}
+
+.fridge-item-screen #fridge-item-qPerUnit {
+    width: 100px;
+}
+
+#fridge-item-Unit {
+    width: 100px;
+}
+
+.fridge-item-screen select {
+    width: 80px;
+    height: 40px;
+    background-color: var(--primary-color1);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--secondary-color1);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    caret-color: #f7f7f8;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+/* fridge item info recipe */
+.fridge-item-recipeList-wrapper {
+    border-bottom: 1px solid var(--primary-color2);
+}
+.fridge-item-screen #fridge-item-RecipeCheckBox {
+    display: none;
+}
+
+.fridge-item-screen .fridge-item-RecipeItems {
+    display: none;
+}
+
+#fridge-item-RecipeCheckBox:checked~.fridge-item-RecipeItems {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: 1px solid var(--primary-color2);
+    padding-bottom: 10px;
+}
+
+#fridge-item-RecipeCheckBox:checked+label #nspan::before {
+    content: '\25BC';
+}
+
+#fridge-item-RecipeCheckBox:checked~#nspan {
+    content: '&darr';
+}
+
+.fridge-item-edit {
+    width: 352px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fridge-item-edit #edit {
+    width: 55px;
+    height: 55px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--primary-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.fridge-item-edit #edit::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    z-index: 1;
+    transform: scale(0);
+    transition: all 0.3s;
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.fridge-item-edit #edit.active::before {
+    transform: scale(1);
+}
+
+.fridge-item-edit #edit.active {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+.fridge-item-edit #edit svg {
+    height: 17px;
+    fill: white;
+    z-index: 3;
+    transition: all 0.2s;
+    transform-origin: bottom;
+}
+
+.fridge-item-edit #edit.active svg {
+    transform: rotate(-15deg) translateX(5px);
+}
+
+.fridge-item-edit #edit::after {
+    content: "";
+    width: 25px;
+    height: 1.5px;
+    position: absolute;
+    bottom: 19px;
+    left: -5px;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-out;
+}
+
+.fridge-item-edit #edit.active::after {
+    transform: scaleX(1);
+    left: 0px;
+    transform-origin: right;
+}
+
+.fridge-filter-alphabet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--secondary-color1);
+    margin-top: 5px;
+
+}
+.fridge-filter-alphabet div{
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fridge-filter-alphabet input[type="radio"] {
+    display: none;
+}
+
+.fridge-filter-alphabet .fridgeFilterCategory {
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid var(--primary-color2);
+    width: max-content;
+    height: fit-content;
+    background-color: var(--primary-color2);
+    color: var(--secondary-color1);  
+}
+
+.fridge-filter-alphabet input[type="radio"]:checked + label .fridgeFilterCategory {
+    background-color: var(--secondary-color1);
+    border: 1px solid var(--primary-color1);
+    color: var(--primary-color1);
+}
+
+.fridge-filter-category {
+    margin-top: 5px;
+    border-top: 1px solid var(--secondary-color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fridge-filter-category div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+}
+
+.fridge-filter-category input[type="radio"] {
+    display: none;
+}
+
+.fridge-filter-category .fridgeCategory3 {
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid var(--primary-color2);
+    width: max-content;
+    height: fit-content;
+    background-color: var(--primary-color2);
+    color: var(--secondary-color1);  
+}
+
+.fridge-filter-category input[type="radio"]:checked + label .fridgeCategory3 {
+    background-color: var(--secondary-color1);
+    border: 1px solid var(--primary-color1);
+    color: var(--primary-color1);
+}
+
+.fridgeFilterFormSubmit {
+    width: 300px;
+    margin-top: 5px;
+    border-top: 1px solid var(--secondary-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fridge-filter-exp {
+    width: 300px;
+    margin-top: 5px;
+    border-top: 1px solid var(--secondary-color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fridge-filter-exp div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+}
+
+
+.fridge-filter-exp input[type="radio"] {
+    display: none;
+}
+
+.fridge-filter-exp .fridgeFilterCategory {
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid var(--primary-color2);
+    width: max-content;
+    height: fit-content;
+    background-color: var(--primary-color2);
+    color: var(--secondary-color1);  
+}
+
+.fridge-filter-exp input[type="radio"]:checked + label .fridgeFilterCategory {
+    background-color: var(--secondary-color1);
+    border: 1px solid var(--primary-color1);
+    color: var(--primary-color1);
+}
+
+.home-content {
+    height: 800px;
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home-expiry {
+    width: 620px;
+    height: 250px;
+    border: 5px solid var(--primary-color1);
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.home-expiry-content {
+    width: 600px;
+    height: 190px;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 100%;
+}
+
+.home-expiry-item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    pointer-events: none;
+}
+
+.home-expiry-item {
+    width: 300px;
+    height: 60px;
+}
+.home-expiry-item-span {
+    color: red;
+}
+.home-expiry-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/expireSoon.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.home-recipe {
+    width: 620px;
+    height: 250px;
+    border: 5px solid var(--primary-color1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.home-recipe-content {
+    width: 600px;
+    height: 190px;
+}
+
+
+.home-grocery {
+    width: 620px;
+    height: 250px;
+    border: 5px solid var(--primary-color1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.home-grocery-content {
+    width: 600px;
+    height: 190px;
+}
+
+
+.keyboard { 
+    position: absolute; 
+    bottom: 0; 
+    width: 640px; 
+    height: 300px; 
+    background-color: var(--primary-color1);
+    color: #fff; 
+    display: none;
+    z-index: 1000; 
+    background-image: url(./images/keyboard.png);
+    background-size: contain;
+    background-position: center;
+
+}
+
+.keyboard-numeric { 
+    position: absolute; 
+    bottom: 0; 
+    width: 640px; 
+    height: 300px; 
+    /* Adjust height as needed */ 
+    background-color: var(--primary-color1);
+    color: #fff; 
+    display: none; /* Initially hidden */ 
+    z-index: 1000; 
+    background-image: url(./images/keyboard-numeric.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.options-section input {
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-color1);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--secondary-color1);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    caret-color: #f7f7f8;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+}
+
+.options-section select {
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-color1);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 3px;
+    color: var(--secondary-color1);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    caret-color: #f7f7f8;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+
+.option-notification {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.option-grocery {
+    display: flex;
+    align-items: center;
+}
